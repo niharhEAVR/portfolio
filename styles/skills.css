@@ -140,9 +140,30 @@
 }
 
 
+.ts-icon {
+  display: flex;
+  gap: 0; /* Removes space between T and S */
+}
+
+.ts-icon i {
+  transform: translateX(2px); /* Move slightly left to overlap nicely */
+}
+
+.ts-icon i:last-child {
+  transform: translateX(-18px); /* Pull S closer to T */
+}
+
+
 /* 🎨 Individual Icon Colors */
 i.fa-node-js {
     color: #68A063
+}
+
+i.fa-t{
+    color: #006bd6;
+}
+i.fa-s{
+    color: #006bd6;
 }
 
 /* Node.js green */

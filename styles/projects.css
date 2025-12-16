@@ -73,6 +73,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 230px;
+    max-height: 350px;
     /* smaller and tighter */
 }
 
@@ -134,6 +135,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3px;
     width: 55px;
     height: 55px;
     color: #777;
