@@ -43,39 +43,32 @@
 
 /* Project Card */
 .projects-container {
-    /* FIX: Use Flexbox to center the content within the projects section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* FIX: Remove fixed width and set a proper max-width for centering */
     width: 100%;
-    max-width: 1200px;
-    /* Increased max-width for a wider, more modern look */
-
-    /* Nest the two cards using CSS Grid within this centered container */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-
-    /* Center the container horizontally */
+    max-width: 1300px;
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(420px, 1fr));
+    gap: 30px;
+    align-items: stretch;
 }
 
-/* === INDIVIDUAL PROJECT CARD === */
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    padding: 20px 25px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 24px;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 230px;
-    max-height: 350px;
-    /* smaller and tighter */
+
+    height: 100%;
+    min-height: 360px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
+
 
 .project-card:hover {
     transform: translateY(-4px);
@@ -83,11 +76,12 @@
 }
 
 /* === CARD CONTENT === */
-.project-content {
-    text-align: center;
-    margin-bottom: 15px;
+.project-content{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    text-align:center;
 }
-
 .project-title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -96,7 +90,8 @@
 }
 
 .project-link {
-    display: inline-block;
+     display:inline-block;
+    align-self:center;
     background: var(--btn-bg);
     color: var(--btn-text);
     padding: 6px 14px;
@@ -112,34 +107,41 @@
     color: var(--bg-color);
 }
 
-.project-desc {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    opacity: 0.85;
-    margin-top: 10px;
+.project-desc{
+    margin-top:18px;
+    line-height:1.7;
+    font-size:.95rem;
+    opacity:.88;
+
+    flex:1;
 }
 
-.tech-uses {
-    width: 100%;
-    border-top: 1px solid var(--border-color);
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+.tech-uses{
+    margin-top:auto;
+
+    border-top:1px solid var(--border-color);
+
+    padding-top:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+
+    flex-wrap:wrap;
 }
 
 
-.skill-icon {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    width: 55px;
-    height: 55px;
-    color: #777;
-    transition: transform 0.3s;
+.skill-icon{
+    display:flex;
+    align-items:center;
+    gap:5px;
+
+    color:#777;
+    transition:.3s;
+
+    width:auto;
+    height:auto;
 }
 
 .skill-icon:hover {
@@ -165,17 +167,13 @@
         font-size: 2.5rem;
     }
 
-    .projects-container {
-        grid-template-columns: 1fr;
-        max-width: 90%;
-        gap: 30px;
-        display: flex;
-        flex-direction: column;
+    .projects-container{
+        grid-template-columns:1fr;
+        max-width:700px;
     }
 
-    .project-card {
-        max-width: 600px;
-        min-height: 220px;
+    .project-card{
+        min-height:340px;
     }
 }
 
