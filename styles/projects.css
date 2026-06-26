@@ -247,3 +247,11 @@
         height: 40px;
     }
 }
+
+
+.tech-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    vertical-align: middle;
+}
